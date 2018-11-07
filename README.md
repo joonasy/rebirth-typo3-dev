@@ -105,4 +105,4 @@ See [CHANGELOG.md](/CHANGELOG.md)
 
 ### `web/typo3conf/ext` is ignored
 
-By default `web/typo3conf/ext` is ignored by git because we don't want this development repository to track extension related changes nor we want to use submodules. This is recommended practice since things may get messy if we have multiple extensions in a single project. If for some reason you want to track these changes, add `!web/typo3conf/ext` to `.gitignore`.
+By default `web/typo3conf/ext` is ignored by git because we don't want this development repository to track extension related changes nor we want to use submodules. This is recommended practice since things may get messy if we have multiple extensions in a single project. If for some reason you want to track these changes, add `!web/typo3conf/ext/*` to `.gitignore`.

@@ -35,11 +35,12 @@ database/*
 !database/.gitkeep
 
 web/fileadmin/*
-web/typo3conf/*
+web/typo3conf/*/*
 web/typo3temp/*
 web/uploads/*
 !web/fileadmin/.gitkeep
 !web/typo3conf/.gitkeep
+!web/typo3conf/ext/.gitkeep
 !web/typo3temp/.gitkeep
 !web/uploads/.gitkeep
 
