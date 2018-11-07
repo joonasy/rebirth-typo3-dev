@@ -1,0 +1,45 @@
+# ======
+# Numerous Always-Ignore Extensions, OS or Editor Folders
+# ======
+
+*.diff
+*.err
+*.log
+*.zip
+*.sass-cache
+*.sql
+.env
+._*
+.cache
+.DS_Store
+.idea
+.project
+.settings
+.tmproj
+.vscode
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+docker-compose.override.yml
+
+
+# ======
+# Project speficic ignores
+# ======
+
+node_modules
+
+database/*
+!database/.gitkeep
+
+web/fileadmin/*
+web/typo3conf/*
+web/typo3temp/*
+web/uploads/*
+!web/fileadmin/.gitkeep
+!web/typo3conf/.gitkeep
+!web/typo3temp/.gitkeep
+!web/uploads/.gitkeep
+
