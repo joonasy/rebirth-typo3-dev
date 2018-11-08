@@ -5,23 +5,27 @@
   "license": "MIT",
   "homepage": "{{production-url}}",
   "version": "1.0.0",
-  "config": {
-    "vendor-dir": "Packages/Libraries"
-  },
   "repositories": [
     {
       "type": "composer",
       "url": "https://composer.typo3.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://packagist.org"
     }
   ],
+  "config": {
+    "vendor-dir": "Packages/Libraries"
+  },
   "require": {
     "typo3/cms": "^8.7.8",
-    "helhum/typo3-console": "^4.9.2",
-    "fluidtypo3/vhs": "^4.3.2",
-    "gridelementsteam/gridelements": "dev-master",
-    "georgringer/news": "^6.1"
+    "fluidtypo3/vhs": "^5.1.0",
+    "gridelementsteam/gridelements": "^8.2.3"
   },
   "require-dev": {
-    "nimut/testing-framework": "^2.0.0"
+    "nimut/testing-framework": "^2.0.0",
+    "phpunit/phpunit": "^5.7.0",
+    "mikey179/vfsStream": "^1.6.0"
   }
 }

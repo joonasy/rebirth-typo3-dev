@@ -1,4 +1,4 @@
-# Rebirth — TYPO3 Development Environment
+# Rebirth — TYPO3 [>=8.7] Development Environment
 
 This is a modern TYPO3 stack designed to work with [Rebirth](https://github.com/joonasy/rebirth) that helps you get started with the best development tools and project structure.
 

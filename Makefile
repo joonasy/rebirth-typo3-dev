@@ -26,7 +26,7 @@ rebuild:
 	docker-compose stop
 	docker-compose rm -f web
 	docker-compose rm -f db
-	docker-compose up -d
+	make start
 
 web:
 	docker-compose exec web bash
