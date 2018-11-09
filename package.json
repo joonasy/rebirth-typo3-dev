@@ -4,6 +4,7 @@
   "description": "Typo3 development environment for {{human-name}}",
   "homepage": "{{production-url}}",
   "main": "flightplan.js",
+  "license": "MIT",
   "scripts": {
     "assets:pull": "fly assets-pull:production",
     "db:backup": "fly db-backup:local",
