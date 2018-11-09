@@ -23,7 +23,7 @@ This is a modern TYPO3 stack designed to work with [Rebirth](https://github.com/
 Quickly install with [create-project](https://github.com/mafintosh/create-project). Add your values to the following one-liner: 
 
 ```
-$ npx create-project my-project-dir-dev joonasy/rebirth-typo3-dev --human-name="My Project" --extension-dir=my-extension-dir --author=joonasy --production-url=https://my-project.com --wpml-user-id="=8365..." --wpml-key="=gxNTN8dHlwZ..." --acf-key="=9wZXJ8ZGF0..."
+$ npx create-project my-project-dir-dev joonasy/rebirth-typo3-dev --human-name="My Project" --extension-dir=my-extension-dir --author=joonasy --production-url=https://my-project.com
 ```
 
 After the installation is done jump to phase 3 in the next section.
