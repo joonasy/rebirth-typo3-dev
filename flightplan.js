@@ -44,7 +44,7 @@ plan.local(['start'], local => {
       --volumes-from={{name}}-web \
       --workdir=/var/www/html/ composer/composer update
     
-    if [ -f "web/typo3conf/ext/{{extension-dir}}" ]  
+    if [ ! -f "web/typo3conf/ext/{{extension-dir}}/node_modules" ]  
       then
         cd web/typo3conf/ext/{{extension-dir}} && yarn
     fi
