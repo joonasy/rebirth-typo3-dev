@@ -12,7 +12,7 @@
 
 # Installation 
 
-**1. Clone this repository recursively**
+**1. Clone this repository**
 
 ```
 $ git clone git@bitbucket.org:{{author}}/{{name}}.git

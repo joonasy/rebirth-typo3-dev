@@ -43,11 +43,6 @@ plan.local(['start'], local => {
     docker run --rm -v ${process.env.DEVELOPMENT_SSH_KEYS_PATH}:/root/.ssh \
       --volumes-from={{name}}-web \
       --workdir=/var/www/html/ composer/composer update
-    
-    if [ ! -f "web/typo3conf/ext/{{extension-dir}}/node_modules" ]  
-      then
-        cd web/typo3conf/ext/{{extension-dir}} && yarn
-    fi
   `);
 });
 

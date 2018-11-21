@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [0.0.2] - 2018-11-20
 
-* Install extension modules only if `node_modules` exists in `ext` folder
+* Remove extension related installations
 
 ## [0.0.1] - 2018-11-07
 
