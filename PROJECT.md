@@ -12,10 +12,11 @@
 
 # Installation 
 
-**1. Clone this repository**
+**1. Clone this repository and the extension repository**
 
 ```
 $ git clone git@bitbucket.org:{{author}}/{{name}}.git
+$ git clone git@bitbucket.org:{{author}}/{{extension-dir}}.git web/typo3conf/ext/{{extension-dir}}
 ```
 
 **2. Prepare for installation** 

@@ -71,29 +71,13 @@ After the installation is done, navigate to [PROJECT.md](PROJECT.md) to learn ab
 
 **5. Recommended actions**
 
-1. Require your extension repository in [web/composer.json](web/composer.json) so it gets installed in further installation processes:
-
-```
-...
-"repositories": [
-  {
-    "type": "vcs",
-    "url": "git@bitbucket.org:{{author}}/{{extension-dir}}.git"
-  }
-],
-"require-dev": {
-  "{{author}}/{{extension-dir}}": "*@dev"
-}
-...
-```
-
-2. Make sure `PROJECT.md` contains correct information such as correct remote git links
-3. Delete the following files 
+1. Make sure `PROJECT.md` contains correct information such as correct remote git links
+2. Delete the following files 
     - This `README.md` 
     - Rename `PROJECT.md` to `README.md`
     - `CHANGELOG.md`
     - `.git` folder
-4. Git init your fresh new project and remember to init your extension as well
+3. Git init your fresh new project and remember to init your extension as well
 
 Happy developing! 
 
@@ -101,8 +85,8 @@ Happy developing!
 
 See [CHANGELOG.md](/CHANGELOG.md)
 
-## Useful information
+## FAQ
 
-### `web/typo3conf/ext` is ignored
+### Why `web/typo3conf/ext` is ignored?
 
 By default `web/typo3conf/ext` is ignored by git because we don't want this development repository to track extension related changes nor we want to use submodules. This is recommended practice since things may get messy if we have multiple extensions in a single project. If for some reason you want to track these changes, remove the line `web/typo3conf/ext/*` from `.gitignore`.

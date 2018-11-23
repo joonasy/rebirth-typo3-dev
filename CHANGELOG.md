@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file. The format 
 ## [0.0.2] - 2018-11-20
 
 * Remove extension related installations
+* Better composer installation
+* Add better method for working with the extension. Use git instead of composer.
 
 ## [0.0.1] - 2018-11-07
 
