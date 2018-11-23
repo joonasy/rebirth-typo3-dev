@@ -54,7 +54,7 @@ plan.local(['start'], local => {
 plan.local(['assets-pull'], local => {
   local.log('Downloading uploads folder...');
   local.exec(`rsync -avz -e "ssh -p ${sshPort}" \
-    ${sshUser}@${sshHost}:${webRoot}uploads typo3`, { failsafe: true });
+    ${sshUser}@${sshHost}:${webRoot}uploads web`, { failsafe: true });
 });
 
 

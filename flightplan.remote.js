@@ -26,7 +26,7 @@ plan.local('start', local => {
   if (input.indexOf('y') === -1) {
     plan.abort('Plan canceled.');
   }
-})
+});
 
 plan.local(['start', 'update', 'assets-push', 'db-replace'], local => {
   sshHost = plan.runtime.hosts[0].host;
@@ -49,7 +49,7 @@ plan.remote(['start', 'update'], remote => {
 
 plan.local(['start', 'update'], local => {
   const filesToCopy = [
-    `typo3/composer.json`,
+    `web/composer.json`,
   ];
 
   local.log('Transferring local files ready for remote installation...');
@@ -61,19 +61,18 @@ plan.remote(['start', 'update'], remote => {
   remote.exec(`curl -sS https://getcomposer.org/installer | php && mv composer.phar ${webRoot}`);
 
   remote.log('Copying files...');
-  remote.exec(`cp ${webRoot}tmp/typo3-deployments/${tmpDir}/typo3/composer.json ${webRoot}`);
+  remote.exec(`cp ${webRoot}tmp/typo3-deployments/${tmpDir}/web/composer.json ${webRoot}`);
 
   remote.log('Installing Composer dependencies...');
   remote.with(`cd ${webRoot}`, () => { remote.exec(`
-    php composer.phar update \
+    php composer.phar update --prefer-dist --no-dev --optimize-autoloader --no-interaction \
     && touch FIRST_INSTALL
   `)});
 
   remote.log('Removing uploaded files...');
-  remote.exec(`rm -r ${webRoot}auth.json`, { failsafe: true });
   remote.exec(`rm -r ${webRoot}composer.json`, { failsafe: true });
   remote.exec(`rm -rf ${webRoot}tmp/typo3-deployments/${tmpDir}`);
-})
+});
 
 
 /* ======
@@ -81,10 +80,10 @@ plan.remote(['start', 'update'], remote => {
  * ====== */
 
  plan.local(['assets-push'], local => {
-  local.log('Deploying uploads folder...')
+  local.log('Deploying uploads folder...');
   local.exec(`rsync -avz -e "ssh -p ${sshPort}" \
-    typo3/uploads ${sshUser}@${sshHost}:${webRoot}`, { failsafe: true })
- })
+    web/uploads ${sshUser}@${sshHost}:${webRoot}`, { failsafe: true });
+ });
 
 
 /* ======
