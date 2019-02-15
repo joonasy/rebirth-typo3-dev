@@ -90,3 +90,12 @@ See [CHANGELOG.md](/CHANGELOG.md)
 ### Why `web/typo3conf/ext` is ignored?
 
 By default `web/typo3conf/ext` is ignored by git because we don't want this development repository to track extension related changes nor we want to use submodules. This is recommended practice since things may get messy if we have multiple extensions in a single project. If for some reason you want to track these changes, remove the line `web/typo3conf/ext/*` from `.gitignore`.
+
+### I cannot clone a private bitbucket repository w/ composer (e.g. `$ make update`)
+
+This could be an issue with [OSX users](https://github.com/docker/for-mac/issues/410). The easiest way to solve this is to use bitbuckets "App Password" [solution](https://stackoverflow.com/questions/23391839/clone-private-git-repo-with-dockerfile):
+
+1. Go to your App Password settings: `Bitbucket settings -> Access Management -> App Password`
+2. Create a password and give it all the permissions. Copy password to your own personal secure location.
+3. In `composer.json` replace your private repository url to include your credentials `https://username:app_password@bitbucket.org/author/repository.git`
+

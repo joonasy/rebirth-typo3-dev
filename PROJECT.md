@@ -143,4 +143,4 @@ Push your local assets to the production server.
 
 ---
 
-You may learn more about the project structure in [Rebirth — TYPO3 Development Environment](https://github.com/joonasy/rebirth-typo3-dev)
+You may learn more about the project and issues in  [Rebirth — TYPO3 Development Environment](https://github.com/joonasy/rebirth-typo3-dev)
