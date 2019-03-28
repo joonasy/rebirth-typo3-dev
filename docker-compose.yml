@@ -16,6 +16,7 @@ services:
       - ./web/typo3temp/:/var/www/html/typo3temp
       - ./web/uploads/:/var/www/html/uploads
       - ./web/composer.json:/var/www/html/composer.json
+      - ./web/composer.lock:/var/www/html/composer.lock
 
   db:
     container_name: {{name}}-db
