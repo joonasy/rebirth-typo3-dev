@@ -64,7 +64,7 @@ plan.remote(['start', 'update'], remote => {
   remote.exec(`cp ${webRoot}tmp/typo3-deployments/${tmpDir}/web/composer.json ${webRoot}`);
 
   remote.log('Installing Composer dependencies...');
-  remote.with(`cd ${webRoot}`, () => { remote.exec(`
+  remote.with(`cd ${webRoot}`, () => { remote.exec(`php composer.phar clearcache && \
     php composer.phar update --prefer-dist --no-dev --optimize-autoloader --no-interaction \
     && touch FIRST_INSTALL
   `)});
