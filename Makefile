@@ -26,12 +26,12 @@ rebuild:
 	docker-compose stop
 	docker-compose rm -f web
 	docker-compose rm -f db
-	make start
+	docker-compose up -d
 
-web:
+web-bash:
 	docker-compose exec web bash
 
-db:
+db-bash:
 	docker-compose exec db bash
 
 assets-pull:

@@ -85,11 +85,11 @@ Rebuild TYPO3 (`app`) container.
 
 Rebuilds and reinstall containers, including your MySQL container (Note that you will lose your current data).
 
-#### `$ make web`
+#### `$ make web-bash`
 
 Connect to TYPO3 (`web`) container.
 
-#### `$ make db`
+#### `$ make db-bash`
 
 Connect to MySQL (`db`) container.
 
