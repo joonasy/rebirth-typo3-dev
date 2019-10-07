@@ -7,7 +7,7 @@
 * GNU/Linux/Unix with Docker ([Docker toolbox](https://www.docker.com/products/docker-toolbox), [Vagrant](https://www.vagrantup.com/downloads.html) VM with Docker, [native Linux with Docker](http://docs.docker.com/linux/step_one/) or [Docker for Mac](https://docs.docker.com/docker-for-mac/)).
 * [docker-compose](https://github.com/docker/compose)
 * [Node.js](http://nodejs.org/)
-* [Yarn](https://yarnpkg.com)
+* [Npm](https://npmpkg.com)
 * SSH access (RSA Key Pair) and [rsync](https://linux.die.net/man/1/rsync) (Optional but required for syncing assets and databases)
 
 # Installation 
@@ -75,7 +75,7 @@ Stop Docker containers.
 
 #### `$ make update`
 
-Update development dependencies (Yarn, Composer).
+Update development dependencies (Npm, Composer).
 
 #### `$ make rebuild`
 

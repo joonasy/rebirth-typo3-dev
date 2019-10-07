@@ -3,15 +3,15 @@
 # =======================================
 
 start:
-	yarn
-	yarn --silent start
+	npm install
+	npm run --silent start
 
 start-clone:
-	yarn
-	yarn --silent start
-	yarn --silent db:pull
-	yarn --silent assets:pull
-	yarn --silent db:replace
+	npm install
+	npm run --silent start
+	npm run --silent db:pull
+	npm run --silent assets:pull
+	npm run --silent db:replace
 
 up:
 	docker-compose up -d
@@ -20,7 +20,7 @@ stop:
 	docker-compose stop
 
 update:
-	yarn --silent start
+	npm run --silent start
 
 rebuild:
 	docker-compose stop
@@ -35,23 +35,23 @@ db-bash:
 	docker-compose exec db bash
 
 assets-pull:
-	yarn --silent assets:pull
+	npm run --silent assets:pull
 
 db-backup:
-	yarn --silent db:backup
+	npm run --silent db:backup
 
 db-pull:
-	yarn --silent db:backup
-	yarn --silent db:pull
+	npm run --silent db:backup
+	npm run --silent db:pull
 
 db-replace:
-	yarn --silent db:backup
-	yarn --silent db:replace
+	npm run --silent db:backup
+	npm run --silent db:replace
 
 db-replace-clone:
-	yarn --silent db:backup
-	yarn --silent db:pull
-	yarn --silent db:replace
+	npm run --silent db:backup
+	npm run --silent db:pull
+	npm run --silent db:replace
 
 
 # =======================================
@@ -59,13 +59,13 @@ db-replace-clone:
 # =======================================
 
 production-start:
-	yarn --silent production:start
+	npm run --silent production:start
 
 production-db-replace:
-	yarn --silent production:db:replace
+	npm run --silent production:db:replace
 
 production-update:
-	yarn --silent production:update
+	npm run --silent production:update
 
 production-assets-push:
-	yarn --silent production:assets:push
+	npm run --silent production:assets:push
