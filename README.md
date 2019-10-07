@@ -52,7 +52,7 @@ If you don't want to use Rebirth you can skip this step.
 2. Create your extension with [Rebirth Yeoman Generator](https://github.com/joonasy/generator-rebirth) and make sure the previously added {{extension-dir}} matches with the generated project name. 
 
 ```
-$ npm install yo -g && npm install generator-rebirth@beta -g
+$ npm install yo -g && npm install generator-rebirth -g
 $ yo rebirth {{extension-dir}} --project=typo3
 ```
 
