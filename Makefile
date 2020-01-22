@@ -4,14 +4,30 @@
 
 start:
 	npm install
+	@if [ ! -f .env ]; then\
+		cp .env.example .env;\
+    fi
+	cd web/typo3conf/ext/{{extension-dir}} && npm i
 	npm run --silent start
 
 start-clone:
 	npm install
+	@if [ ! -f .env ]; then\
+		cp .env.example .env;\
+    fi
+	cd web/typo3conf/ext/{{extension-dir}} && npm i
 	npm run --silent start
 	npm run --silent db:pull
 	npm run --silent assets:pull
 	npm run --silent db:replace
+
+bootstrap:
+	rm -rf README.md
+	rm -rf CHANGELOG.md
+	mv PROJECT.MD README.md
+	@if [ ! -d .git ]; then\
+		git init && git add . && git commit -m "Init";\
+    fi
 
 up:
 	docker-compose up -d

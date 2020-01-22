@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.0.4] - 2020-01-22
+
+- Automatically delete unnecessary files & git init with `$ make bootstrap`
+- Automatically install extension node_modules
+- Automatically add .env.example -> .env
+- Tweaked instructions, updated deps
+
 ## [0.0.3] - 2019-10-08
 
 - Yarn -> Npm

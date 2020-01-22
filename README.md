@@ -69,17 +69,11 @@ Crab a cup of :coffee: as the installation process may take a while. If you are 
 
 After the installation is done, navigate to [PROJECT.md](PROJECT.md) to learn about further installation process and available commands.
 
-**5. Recommended actions**
+**5. Clean up & recommended actions**
 
-1. Make sure `PROJECT.md` contains correct information such as correct remote git links
-2. Delete the following files 
-    - This `README.md` 
-    - Rename `PROJECT.md` to `README.md`
-    - `CHANGELOG.md`
-    - `.git` folder
-3. Git init your fresh new project and remember to init your extension as well
+Run `$ make bootstrap`. Note that the script will remove this file and rename `PROJECT.MD` to `README.md`. See the new [README.md](README.md) to learn about further installation process, available commands and make sure it contains correct information such as remote git links.
 
-Happy developing! 
+Happy developing!
 
 ## Changelog
 
@@ -98,4 +92,9 @@ This could be an issue with [OSX users](https://github.com/docker/for-mac/issues
 1. Go to your App Password settings: `Bitbucket settings -> Access Management -> App Password`
 2. Create a password and give it all the permissions. Copy password to your own personal secure location.
 3. In `composer.json` replace your private repository url to include your credentials `https://username:app_password@bitbucket.org/author/repository.git`
+
+## License
+
+Copyright (c) 2020 Joonas Ylitalo (Twitter: [@joonasy](https://twitter.com/joonasy)). Licensed under the MIT license.
+
 
