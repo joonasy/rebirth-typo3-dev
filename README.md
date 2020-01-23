@@ -81,9 +81,15 @@ See [CHANGELOG.md](/CHANGELOG.md)
 
 ## FAQ
 
-### Why `web/typo3conf/ext` is ignored?
+### Should `web/typo3conf/ext` be ignored?
 
-By default `web/typo3conf/ext` is ignored by git because we don't want this development repository to track extension related changes nor we want to use submodules. This is recommended practice since things may get messy if we have multiple extensions in a single project. If for some reason you want to track these changes, remove the line `web/typo3conf/ext/*` from `.gitignore`.
+By default `web/typo3conf/ext` is not ignored by git because we want to keep things simple by keeping all the development material in the same repository. If you don't want this development repository to track theme related changes just add the following to `.gitignore` and remember to document on how to pull your extension.
+
+```
+web/typo3conf/ext/*
+!web/typo3conf/ext/.gitkeep
+```
+
 
 ### I cannot clone a private bitbucket repository w/ composer (e.g. `$ make update`)
 

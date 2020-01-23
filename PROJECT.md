@@ -16,7 +16,6 @@
 
 ```
 $ git clone git@bitbucket.org:{{author}}/{{name}}.git
-$ git clone git@bitbucket.org:{{author}}/{{extension-dir}}.git web/typo3conf/ext/{{extension-dir}}
 ```
 
 **2. Prepare for installation** 

@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. The format 
 - Automatically install extension node_modules
 - Automatically add .env.example -> .env
 - Tweaked instructions, updated deps
+- Don't ignore `web/typo3conf/ext/*` by default to keep things simple
 
 ## [0.0.3] - 2019-10-08
 
