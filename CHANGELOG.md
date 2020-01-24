@@ -7,8 +7,10 @@ All notable changes to this project will be documented in this file. The format 
 - Automatically delete unnecessary files & git init with `$ make bootstrap`
 - Automatically install extension node_modules
 - Automatically add .env.example -> .env
+- Automatically add extension .env.example -> .env
 - Tweaked instructions, updated deps
 - Don't ignore `web/typo3conf/ext/*` by default to keep things simple
+- Run extension build automatically in start
 
 ## [0.0.3] - 2019-10-08
 

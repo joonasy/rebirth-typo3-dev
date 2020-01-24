@@ -38,7 +38,17 @@ plan.local(['start', 'assets-pull', 'db-pull', 'db-replace'], local => {
 plan.local(['start'], local => {
   local.log('Installing dependencies...');
   local.exec(`
+    if [ ! -f web/typo3conf/ext/{{extension-dir}}/.env ]; then
+      cp web/typo3conf/ext/{{extension-dir}}/.env.example \
+      web/typo3conf/ext/{{extension-dir}}/.env
+    fi
+
     docker-compose up -d
+
+    if [ -f web/typo3conf/ext/{{extension-dir}}/package.json ]; then
+      npm --prefix web/typo3conf/ext/{{extension-dir}} install && \
+      npm --prefix web/typo3conf/ext/{{extension-dir}} run build
+    fi
 
     docker run --rm -v ${process.env.DEVELOPMENT_SSH_KEYS_PATH}:/root/.ssh \
       --volumes-from={{name}}-web \
